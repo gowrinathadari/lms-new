@@ -1,0 +1,48 @@
+---
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: api-config
+data:
+  MODE: production
+  PORT: "8080"
+  DATABASE_url: postgresql://postgres:password@80.0.1.184:5432/postgres
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: node-api
+  labels:
+    app: node-api
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: node-api
+  template:
+    metadata:
+      labels:
+        app: node-api
+    spec:
+      containers:
+      - name: node-api
+        imagePullPolicy: Always
+        image: gowrinth225/api-1.1:latest
+        envFrom:
+        - configMapRef:
+            name: api-config
+        ports:
+        - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: node-api
+spec:
+  type: LoadBalancer
+  selector:
+    app: node-api
+  ports:
+  - name: http
+    port: 80
+    targetPort: 8080
