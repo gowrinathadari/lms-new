@@ -6,7 +6,7 @@ metadata:
 data:
   MODE: production
   PORT: "8080"
-  DATABASE_url: postgresql://postgres:password@80.0.1.69:5432/postgres
+  DATABASE_URL: postgresql://postgres:password@80.0.1.69:5432/postgres
 ---
 apiVersion: apps/v1
 kind: Deployment
