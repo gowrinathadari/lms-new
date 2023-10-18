@@ -4,7 +4,7 @@ kind: ConfigMap
 metadata:
   name: my-configmap
 data:
-  VITE_API_URL: "http://node-api"
+  VITE_API_URL: "http://a351ccb2053904f5d80bfb50b84da3f0-326770733.ap-south-1.elb.amazonaws.com/api"
 
 ---
 apiVersion: apps/v1
