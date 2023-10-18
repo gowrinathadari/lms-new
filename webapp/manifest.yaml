@@ -1,12 +1,4 @@
 ---
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: web-config
-data:
-  PORT: "8080"
-  API_HOST: "http://a125bb25000144a519ae4f23ddce773b-652229179.ap-south-1.elb.amazonaws.com"
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -28,8 +20,6 @@ spec:
         imagePullPolicy: Always
         image: gowrinth225/webapp-2.0:latest
         envFrom:
-        - configMapRef:
-            name: web-config
         ports:
         - containerPort: 80
 ---
