@@ -15,7 +15,7 @@ function Dashboard() {
     return (
       <>
         <Helmet>
-          <title>My Courses</title>
+          <title>My New Courses</title>
         </Helmet>
         <Banner />
         <div className="mx-auto max-w-4xl py-8 text-center">
