@@ -20,7 +20,7 @@ function Dashboard() {
         <Banner />
         <div className="mx-auto max-w-4xl py-8 text-center">
           <Text>
-            <h2>{"There's something New nothing here..."}</h2>
+            <h2>{"There's something New  here..."}</h2>
             <p>
               Enrolled courses will appear here, click below button to contact
               the academy.
