@@ -40,7 +40,7 @@ function Dashboard() {
   return (
     <>
       <Helmet>
-        <title>My Courses</title>
+        <title>Durga Bhavani Lingala</title>
       </Helmet>
       <Banner />
       <div className="mx-auto max-w-5xl space-y-4 p-4">
